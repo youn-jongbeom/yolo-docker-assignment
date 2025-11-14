@@ -14,14 +14,16 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# [cite_start]4. Darknet 소스 코드 클론 (튜토리얼 2페이지 참고) [cite: 15]
-[cite_start]RUN git clone https://github.com/pjreddie/darknet . [cite: 15]
+# 4. Darknet 소스 코드 클론 (튜토리얼 2페이지 참고)
+RUN git clone https://github.com/pjreddie/darknet .
 
-# [cite_start]5. Darknet 빌드 (튜토리얼 2페이지 참고) [cite: 16]
-[cite_start]RUN make [cite: 16]
+# 5. Darknet 빌드 (튜토리얼 2페이지 참고)
+RUN make
 
-# [cite_start]6. YOLOv3 가중치 파일 다운로드 (튜토리얼 2페이지 참고) [cite: 18]
-[cite_start]RUN wget https://data.pjreddie.com/files/yolov3.weights [cite: 18]
+# 6. YOLOv3 가중치 파일 다운로드 (튜토리얼 2페이지 참고)
+RUN wget https://data.pjreddie.com/files/yolov3.weights
+
+# ... (이후 내용) ...
 
 # 7. 실행 스크립트 복사 및 실행 권한 부여
 COPY entrypoint.sh .

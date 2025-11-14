@@ -9,4 +9,4 @@ wget "$IMAGE_URL" -O input.jpg
 
 # [cite_start]2. Darknet detector 실행 (튜토리얼 2페이지 명령어 기반) [cite: 19]
 #    data/dog.jpg 대신 다운로드한 input.jpg를 사용
-[cite_start]./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights input.jpg [cite: 19]
+./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights input.jpg [cite: 19]
